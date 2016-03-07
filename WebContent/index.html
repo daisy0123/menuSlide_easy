@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css" type="text/css">
+		<link rel="stylesheet" href="css/nav.css" type="text/css" />
+	</head>
+	<body>
+		<div class="box">
+			<ul class="menu">
+				<li class="level">
+					<a class="u1" href="#">目录一</a>
+					<ul class="level_u1">
+						<li><a href="#">子目录1</a></li>
+						<li><a href="#">子目录2</a></li>
+						<li><a href="#">子目录3</a></li>
+					</ul>
+				</li>
+				<li class="level">
+					<a class="u1" href="#">目录二</a>
+					<ul class="level_u1">
+						<li><a href="#">子目录1</a></li>
+						<li><a href="#">子目录2</a></li>
+						<li><a href="#">子目录3</a></li>
+					</ul>
+				</li>
+				<li class="level">
+					<a class="u1" href="#">目录三</a>
+					<ul class="level_u1">
+						<li><a href="#">子目录1</a></li>
+						<li><a href="#">子目录2</a></li>
+						<li><a href="#">子目录3</a></li>
+					</ul>
+				</li>
+				<li class="level">
+					<a class="u1" href="#">目录四</a>
+					<ul class="level_u1">
+						<li><a href="#">子目录1</a></li>
+						<li><a href="#">子目录2</a></li>
+						<li><a href="#">子目录3</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script>
+			$(function(){
+				$(".level > a").click(function(){
+					$(this).addClass("current").next().slideDown(1000).parent().siblings().children("a").removeClass("current").next().slideUp(1000);
+				return false;
+				});
+			});
+		</script>
+	</body>
+</html>
